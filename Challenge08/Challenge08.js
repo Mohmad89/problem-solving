@@ -27,7 +27,11 @@
 // -------------------------------------------------------------------------------------------------------
 
 const customerAndAge = (obj) => {
-    // write your code here
+    let arr = [];
+    for (const property in obj) {
+        arr.push(`Customer Name :${property} , Age :${obj[property]}`);
+    }
+    return arr;
 };
 
 // -------------------------------------------------------------------------------------------------------
@@ -54,7 +58,12 @@ const customerAndAge = (obj) => {
 // -------------------------------------------------------------------------------------------------------
 
 const getEntries = (obj) => {
-    // write your code here
+    let arr = obj.entries();
+    let arr2 = [];
+    for (const prop in arr) {
+        arr2.push(`${prop}: ${arr[prop]}`);
+    }
+    return arr2;
 };
 
 // -------------------------------------------------------------------------------------------------------
@@ -95,7 +104,10 @@ const courses = [
 const getInfo = (arr) => {
     let coursesName = [];
     let studentsName = [];
-    // write your code here
+    for (let i = 0; i < arr.length; i++) {
+        coursesName.push(arr[i].course);
+        studentsName.push(arr[i].Students);
+    }
 
     return { coursesName, studentsName };
 };
