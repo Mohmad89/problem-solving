@@ -53,7 +53,7 @@ const reverseArray = (arr) => {
     for (var i = arr.length - 1; i >= 0; i--) {
         array.push(arr[i]);
     }
-    console.log(array.toString());
+    return array;
 }
 
 module.exports = { findMax, sumNums, reverseArray };
